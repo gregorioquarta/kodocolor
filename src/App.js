@@ -23,8 +23,8 @@ export default function App() {
     <div className="App">
       <h1>Hello KodoPixelColor </h1>
       <h2>
-        Place une couleur hexadecimale dans le champ et clique sur le pixel qui
-        t intéresse.
+      Indique une couleur avec un code hexadécimal dans le champ et clique sur le pixel qui
+        t intéresse ou choisis dans une couleur proposée.
       </h2>
       <div className="ColorContainer">
         <SwatchesPicker onChangeComplete={ handleChangeComplete } />
@@ -41,6 +41,9 @@ export default function App() {
           placeholder="#FF5A5A"
           onChange={handleChange}
         />
+        <div>
+        <a href='https://htmlcolorcodes.com/' target="_blank" rel="noreferrer" >Exemples de couleurs</a> 
+        </div>
       </div>
       <div className="container">
         <div className="bloc" onClick={(e) => activateLasers(e)}></div>
