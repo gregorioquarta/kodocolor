@@ -1,0 +1,21 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .container {
+    margin: auto;
+    width: 1000px;
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .bloc {
+    width: 10px;
+    height: 10px;
+    border: 1px solid lightslategray;
+    box-sizing: border-box;
+  }
+  .bloc:hover {
+    background-color: red;
+  }
+  
