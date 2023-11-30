@@ -3,9 +3,10 @@
     text-align: center;
   }
   .container {
+    padding: 20px;
     margin: auto;
     width: 1000px;
-    border: 1px solid red;
+    
     display: flex;
     flex-wrap: wrap;
   }
@@ -18,4 +19,8 @@
   .bloc:hover {
     background-color: red;
   }
-  
+.ColorContainer {
+    position: fixed;
+    top: 15%;
+    left: 5%;
+}  

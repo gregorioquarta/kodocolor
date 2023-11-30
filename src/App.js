@@ -1,16 +1,24 @@
 import "./styles.css";
 import React, { useState, useEffect } from "react";
+import { PhotoshopPicker, SwatchesPicker } from 'react-color';
 
 export default function App() {
   const [color, setColor] = useState("#FF5A5A");
+  
   useEffect(() => {
     setColor("#FF5A5A");
   }, []);
 
-  console.log(color);
+  console.log("la couleur : ",color);
 
   const activateLasers = (e) => (e.target.style.backgroundColor = color);
   const handleChange = (event) => setColor(event.target.value);
+  const handleChangeComplete = (color, event) => {
+    console.log('picker', color.hex )
+   setColor(color.hex);
+  };
+
+
   return (
     <div className="App">
       <h1>Hello KodoPixelColor </h1>
@@ -18,6 +26,9 @@ export default function App() {
         Place une couleur hexadecimale dans le champ et clique sur le pixel qui
         t intéresse.
       </h2>
+      <div className="ColorContainer">
+        <SwatchesPicker onChangeComplete={ handleChangeComplete } />
+      </div>
       <div>
       <label for="color">Couleur hexadécimal commence par # : </label>
         <input
