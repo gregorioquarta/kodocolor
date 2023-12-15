@@ -1,6 +1,6 @@
 import "./styles.css";
 import React, { useState, useEffect } from "react";
-import { PhotoshopPicker, SwatchesPicker } from 'react-color';
+
 
 export default function App() {
   const [color, setColor] = useState("#FF5A5A");
@@ -13,11 +13,8 @@ export default function App() {
 
   const activateLasers = (e) => (e.target.style.backgroundColor = color);
   const handleChange = (event) => setColor(event.target.value);
-  const handleChangeComplete = (color, event) => {
-    console.log('picker', color.hex )
-   setColor(color.hex);
-  };
-
+  
+  
 
   return (
     <div className="App">
@@ -26,9 +23,7 @@ export default function App() {
       Indique une couleur avec un code hexadécimal dans le champ et clique sur le pixel qui
         t intéresse ou choisis dans une couleur proposée.
       </h2>
-      <div className="ColorContainer">
-        <SwatchesPicker onChangeComplete={ handleChangeComplete } />
-      </div>
+      
       <div>
       <label for="color">Couleur hexadécimal commence par # : </label>
         <input
